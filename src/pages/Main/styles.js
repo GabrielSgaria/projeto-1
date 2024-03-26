@@ -28,7 +28,7 @@ export const Form = styled.form`
 
   input {
     flex: 1;
-    border: 1px solid ${props=>(props.error ? '#FF0000': '#eee')};
+    border: 1px solid ${(props) => (props.error ? "#FF0000" : "#eee")};
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 17px;
@@ -73,12 +73,11 @@ export const SubmitButton = styled.button.attrs((props) => ({
     `}
 `;
 
-
 export const List = styled.ul`
-  list-style:none;
+  list-style: none;
   margin-top: 20px;
 
-  li{
+  li {
     padding: 15px 0;
     display: flex;
     flex-direction: row;
@@ -89,25 +88,20 @@ export const List = styled.ul`
       border-top: 1px solid #eee;
     }
 
-    a{
-      color: #0D2636;
+    a {
+      color: #0d2636;
       text-decoration: none;
     }
-
   }
-
 `;
 
 export const DeleteButton = styled.button.attrs({
-  type: 'button'
+  type: "button",
 })`
-
   background: transparent;
   color: #0d2636;
-  border:0;
+  border: 0;
   padding: 8px 7px;
-  outline:0;
+  outline: 0;
   border-radius: 4px;
-
-
 `;
