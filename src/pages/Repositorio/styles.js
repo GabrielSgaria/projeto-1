@@ -55,77 +55,88 @@ export const IssuesList = styled.ul`
   border-top: 1px solid #eee;
   list-style: none;
 
-
-  li{
+  li {
     display: flex;
     padding: 15px 10px;
 
     & + li {
-        margin-top: 12px;
+      margin-top: 12px;
     }
-    
-    img{ 
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border: 2px solid #0d2636;
 
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid #0d2636;
     }
     div {
-        flex:1;
-        margin-left: 12px;
+      flex: 1;
+      margin-left: 12px;
 
-
-        p{
-            margin-top: 10px;
-            font-size: 12px;
-            color: #000;
-        }
+      p {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #000;
+      }
     }
-    strong{
-        font-size: 15px;
+    strong {
+      font-size: 15px;
 
-        a{
-            text-decoration:none;
-            color: #222;
-            transform: 0.3s;
+      a {
+        text-decoration: none;
+        color: #222;
+        transform: 0.3s;
 
-            &:hover{
-                color: #0071db;
-            }
+        &:hover {
+          color: #0071db;
         }
-        span{
-            background: #222;
-            color: #FFF;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight:600;
-            padding: 5px 7px;
-            margin-left: 10px
-        }
-
+      }
+      span {
+        background: #222;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px 7px;
+        margin-left: 10px;
+      }
     }
   }
-  
-
 `;
 export const PageActions = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  button{
+  button {
     outline: 0;
     border: 0;
     background: #222;
-    color: #FFF;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 4px;
 
-    &:disabled{
+    &:disabled {
       cursor: not-allowed;
       opacity: 0.5;
     }
   }
+`;
 
+export const FilterList = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+
+  button {
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    border-radius: 4px;
+    &:nth-child(${props => props.active + 1}) {
+      background: #0071db;
+      color: #fff;
+    }
+  }
 `;
